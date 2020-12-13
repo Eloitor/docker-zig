@@ -1,15 +1,23 @@
-# Zig [![CircleCI](https://circleci.com/gh/euantorano/docker-zig.svg?style=svg)](https://circleci.com/gh/euantorano/docker-zig)
+# Zig
 
-A docker image for [Zig](https://ziglang.org) based upon Alpine Linux 3.12.
+[![CircleCI](https://circleci.com/gh/eloitor/docker-zig.svg?style=svg)](https://circleci.com/gh/eloitor/docker-zig)
+
+A docker image for [Zig](https://ziglang.org) with the c libraries X11 and Xft.
+This image is based upon Alpine Linux 3.12.
+
+See https://github.com/euantorano/docker-zig the original version of this image without the libraries.
 
 ## Using this image
 
 ### Building an executable
 
 ```
-docker run -v $PWD:/app euantorano/zig:0.7.0 build-exe hello.zig
+docker run -v $PWD:/app eloitor/zig:0.7.0 build-exe hello.zig -lc -lX11 -lXft
 ```
 
+The commands for the extra libraries (`-lc -lX11 -lXft` are optional.
+
+If you don't need the libraries, you can also run  the image `euantorano/zig`.
 ## Available tags
 
 There are two variants of tags provided by this repository - release tags such as `0.7.0`, and `master` branch builds such as `master-28018703`.
