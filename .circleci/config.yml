@@ -1,4 +1,5 @@
 version: 2.1
+
 jobs:
   build:
     docker:
@@ -52,7 +53,9 @@ workflows:
   version: 2
   commit:
     jobs:
-      - build
+      - build:
+          context: docker
+
   nightly:
     triggers:
       - schedule:
