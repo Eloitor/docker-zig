@@ -9,7 +9,7 @@ import argparse
 from urllib.parse import urlparse
 
 
-REPOSITORY_NAME = "euantorano/zig"
+REPOSITORY_NAME = "eloitor/zig"
 RELEASES_URL = "https://ziglang.org/download/index.json"
 
 

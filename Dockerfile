@@ -14,6 +14,8 @@ COPY docker-zig-manager /usr/local/bin/docker-zig-manager
 RUN set -ex \
 	&& /usr/local/bin/docker-zig-manager fetch $ZIG_URL $ZIG_SHA256 \
 	&& /usr/local/bin/docker-zig-manager extract
+RUN apk add libx11-dev
+RUN apk add libxft-dev
 
 ENV PATH "/usr/local/bin/zig:${PATH}"
 
