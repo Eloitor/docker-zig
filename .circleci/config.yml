@@ -54,7 +54,7 @@ workflows:
   commit:
     jobs:
       - build:
-          context: docker
+          context: dockerhub
 
   nightly:
     triggers:
