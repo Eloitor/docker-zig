@@ -1,6 +1,6 @@
 # Zig
 
-[![CircleCI](https://circleci.com/gh/eloitor/docker-zig.svg?style=svg)](https://circleci.com/gh/eloitor/docker-zig)
+[![CircleCI](https://circleci.com/gh/Eloitor/docker-zig.svg?style=svg)](https://circleci.com/gh/Eloitor/docker-zig)
 
 A docker image for [Zig](https://ziglang.org) with the c libraries X11 and Xft.
 This image is based upon Alpine Linux 3.12.
